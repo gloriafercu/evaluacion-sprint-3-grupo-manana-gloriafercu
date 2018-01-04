@@ -1,0 +1,12 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 128px;
+  width: 100%;
+  background-color: $color-extra-dark-midtone;
+  .love {
+    color: $color-midtone;
+  }
+}

@@ -1,0 +1,21 @@
+ * {
+   margin: 0;
+   padding: 0;
+   font-family: $font-roboto;
+ }
+ .site-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.wrapper {
+  flex: 1 0 auto;
+  padding: 0 15px;
+  @media (min-width: 768px) and (max-width: 1279px) {
+    padding: 0 39px;
+  }
+  @media (min-width: 1280px) {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+}

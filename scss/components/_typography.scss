@@ -1,0 +1,99 @@
+.insomnia {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  color: $color-light-midtone;
+  @media (min-width: 1280px) {
+    font-size: 16px;
+  }
+}
+.title-hero {
+  font-family: $font-robotoSlab;
+  font-size: 42px;
+  line-height: 55px;
+  color: $color-light;
+  @media (min-width: 768px) and (max-width: 1279px) {
+    font-size: 80px;
+    line-height: 106px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 100px;
+    line-height: 132px;
+  }
+}
+.title {
+  font-family: $font-robotoSlab;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  color: $color-dark;
+  @media (min-width: 768px) and (max-width: 1279px) {
+    font-size: 26px;
+    line-height: 45px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 32px;
+    line-height: 45px;
+  }
+}
+.title-reason {
+  font-family: $font-robotoSlab;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  color: $color-dark;
+  @media (min-width: 768px) and (max-width: 1279px) {
+    font-size: 24px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 24px;
+  }
+}
+.paragraph {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  &.looking {
+    color: $color-dark-midtone;
+  }
+  &.reason {
+    color: $color-dark;
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
+    font-size: 20px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 20px;
+  }
+}
+.paragraph-hero {
+  font-size: 16px;
+  font-weight: 400;
+  color: $color-light;
+  @media (min-width: 768px) and (max-width: 1279px) {
+    font-size: 24px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 24px;
+  }
+}
+
+.button {
+  font-size: 20px;
+  line-height: 45px;
+  font-weight: 500;
+  &.go {
+    color: $color-midtone;
+  }
+  &.more {
+    color: $color-light;
+  }
+}
+
+.copyright,
+.we-love {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $color-light;
+}

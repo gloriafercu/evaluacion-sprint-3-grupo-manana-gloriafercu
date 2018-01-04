@@ -1,0 +1,217 @@
+.hero {
+  background-image: url("../images/cover.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.hero .title-hero {
+  text-align: center;
+  margin-top: 284px;
+}
+
+.hero .paragraph-hero {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.insomnia {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #8ccbea;
+}
+
+.title-hero {
+  font-family: "Roboto Slab", serif;
+  font-size: 42px;
+  line-height: 55px;
+  color: #ffffff;
+}
+
+.title {
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #000000;
+}
+
+.title-reason {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #000000;
+}
+
+.paragraph {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.paragraph.looking {
+  color: #4a4a4a;
+}
+
+.paragraph.reason {
+  color: #000000;
+}
+
+.paragraph-hero {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.button {
+  font-size: 20px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.button.go {
+  color: #f26002;
+}
+
+.button.more {
+  color: #ffffff;
+}
+
+.copyright,.we-love {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  padding: 0 15px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 128px;
+  width: 100%;
+  background-color: #304268;
+}
+
+footer .love {
+  color: #f26002;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .hero .title-hero {
+    margin-top: 384px;
+  }
+
+  .hero {
+    margin-top: 20px;
+  }
+
+  .title-hero {
+    font-size: 80px;
+    line-height: 106px;
+  }
+
+  .title {
+    font-size: 26px;
+    line-height: 45px;
+  }
+
+  .title-reason {
+    font-size: 24px;
+  }
+
+  .paragraph {
+    font-size: 20px;
+  }
+
+  .paragraph-hero {
+    font-size: 24px;
+  }
+
+  .wrapper {
+    padding: 0 39px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero .title-hero {
+    margin-top: 384px;
+  }
+
+  .hero {
+    margin-top: 0px;
+  }
+
+  .insomnia {
+    font-size: 16px;
+  }
+
+  .title-hero {
+    font-size: 100px;
+    line-height: 132px;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .title-reason {
+    font-size: 24px;
+  }
+
+  .paragraph {
+    font-size: 20px;
+  }
+
+  .paragraph-hero {
+    font-size: 24px;
+  }
+
+  .wrapper {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
