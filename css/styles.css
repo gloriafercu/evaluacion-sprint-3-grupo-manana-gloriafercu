@@ -1,22 +1,82 @@
 .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-image: url("../images/cover.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.hero .title-hero {
+.content-hero {
   text-align: center;
-  margin-top: 284px;
+  position: absolute;
+  max-width: 290px;
+  bottom: 143px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
-.hero .paragraph-hero {
-  text-align: center;
+.content-hero .paragraph-hero {
   margin-top: 10px;
+}
+
+.btn-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.btn-menu .icon-menu {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn-scroll-down {
+  position: absolute;
+  cursor: pointer;
+  bottom: 53px;
+}
+
+.btn-scroll-down .icon-scroll-down {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.title-hero {
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 55px;
+  color: #ffffff;
+}
+
+.paragraph-hero {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
 }
 
 .insomnia {
@@ -26,24 +86,9 @@
   color: #8ccbea;
 }
 
-.title-hero {
-  font-family: "Roboto Slab", serif;
-  font-size: 42px;
-  line-height: 55px;
-  color: #ffffff;
-}
-
 .title {
   font-family: "Roboto Slab", serif;
   font-size: 24px;
-  font-weight: bold;
-  line-height: 30px;
-  color: #000000;
-}
-
-.title-reason {
-  font-family: "Roboto Slab", serif;
-  font-size: 18px;
   font-weight: bold;
   line-height: 30px;
   color: #000000;
@@ -63,10 +108,12 @@
   color: #000000;
 }
 
-.paragraph-hero {
-  font-size: 16px;
-  font-weight: 400;
-  color: #ffffff;
+.title-reason {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #000000;
 }
 
 .button {
@@ -90,6 +137,57 @@
   color: #ffffff;
 }
 
+.copyright .love,.we-love .love {
+  color: #f26002;
+}
+
+.btn-menu {
+  background-color: #0271bc;
+  border: 0;
+  width: 44px;
+  height: 44px;
+}
+
+.btn-menu .icon-menu {
+  background-image: url("../images/ico-menu.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 14px;
+}
+
+.btn-scroll-down {
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+.btn-scroll-down .icon-scroll-down {
+  background-image: url("../images/ico-scroll-down.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 11.7px;
+}
+
+.btn-arrow {
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+.btn-arrow .icon-arrow {
+  background-image: url("../images/ico-arrow.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 20.6px;
+  height: 24px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -111,10 +209,16 @@
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  padding: 0 15px;
 }
 
-footer {
+.container {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 15px;
+}
+
+.footer {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,17 +237,36 @@ footer {
   background-color: #304268;
 }
 
-footer .love {
-  color: #f26002;
+.copyright,.we-love {
+  text-align: center;
+}
+
+.btn-arrow {
+  position: absolute;
+  top: -22px;
+  cursor: pointer;
+}
+
+.btn-arrow .icon-arrow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
-  .hero .title-hero {
-    margin-top: 384px;
+  .content-hero {
+    max-width: 690px;
+    bottom: 120px;
   }
 
-  .hero {
+  .content-hero .paragraph-hero {
     margin-top: 20px;
+  }
+
+  .btn-scroll-down {
+    bottom: 45px;
   }
 
   .title-hero {
@@ -151,39 +274,40 @@ footer .love {
     line-height: 106px;
   }
 
+  .paragraph-hero {
+    font-size: 24px;
+  }
+
   .title {
     font-size: 26px;
     line-height: 45px;
-  }
-
-  .title-reason {
-    font-size: 24px;
   }
 
   .paragraph {
     font-size: 20px;
   }
 
-  .paragraph-hero {
+  .title-reason {
     font-size: 24px;
   }
 
-  .wrapper {
-    padding: 0 39px;
+  .container {
+    margin: 0 39px;
   }
 }
 
 @media (min-width: 1280px) {
-  .hero .title-hero {
-    margin-top: 384px;
+  .content-hero {
+    max-width: 730px;
+    bottom: 88px;
   }
 
-  .hero {
-    margin-top: 0px;
+  .content-hero .paragraph-hero {
+    margin-top: 0;
   }
 
-  .insomnia {
-    font-size: 16px;
+  .btn-scroll-down {
+    bottom: 13px;
   }
 
   .title-hero {
@@ -191,25 +315,28 @@ footer .love {
     line-height: 132px;
   }
 
+  .paragraph-hero {
+    font-size: 24px;
+  }
+
+  .insomnia {
+    font-size: 16px;
+  }
+
   .title {
     font-size: 32px;
     line-height: 45px;
-  }
-
-  .title-reason {
-    font-size: 24px;
   }
 
   .paragraph {
     font-size: 20px;
   }
 
-  .paragraph-hero {
+  .title-reason {
     font-size: 24px;
   }
 
-  .wrapper {
-    max-width: 1110px;
+  .container {
     margin: 0 auto;
   }
 }

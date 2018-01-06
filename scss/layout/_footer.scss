@@ -1,4 +1,6 @@
-footer {
+
+.footer {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,7 +8,16 @@ footer {
   height: 128px;
   width: 100%;
   background-color: $color-extra-dark-midtone;
-  .love {
-    color: $color-midtone;
+}
+.copyright,
+.we-love {
+  text-align: center;
+}
+.btn-arrow {
+  position: absolute;
+  top: -22px;
+  cursor: pointer;
+  .icon-arrow {
+    @include absoluteCentered();
   }
 }
