@@ -22,6 +22,8 @@
   border-radius: 50%;
   width: 45px;
   height: 45px;
+  text-decoration: none;
+  color: inherit;
   .icon-scroll-down {
     background-image: url($pathImages + 'ico-scroll-down.svg');
     background-position: center center;
@@ -36,6 +38,10 @@
   height: 45px;
   border-radius: 22.5px;
   cursor: pointer;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
   &.go {
     background-color: $color-light;
     border: 2px solid $color-midtone;

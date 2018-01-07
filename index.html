@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <title>Evaluación Sprint3</title>
 </head>
-<body class="site-content">
+<body id="top" class="site-content">
   <header class="hero">
     <button class="btn-menu"><span class="icon-menu"></span></button>
     <div class="content-menu">
@@ -26,10 +26,12 @@
     <p class="paragraph-hero">In hac habitasse platea dictumst.</p>
   </div>
 </div>
-<button class="btn-scroll-down"><span class="icon-scroll-down"></span></button>
+<a href="#looking-window" class="btn-scroll-down">
+  <span class="icon-scroll-down"></span>
+</a>
 </header>
 <main class="wrapper">
-  <div class="looking-window">
+  <div id="looking-window" class="looking-window">
     <div class="container">
       <span class="insomnia">Insomnia Tips</span>
       <h2 class="title">Looking Through A Window</h2>
@@ -60,14 +62,16 @@
 
 </main>
 <footer class="footer" >
-  <button class="btn-arrow">
-
-    <span class="icon-arrow"></span></button>
+  <a href="#top" class="btn-arrow">
+    <span class="icon-arrow"></span>
+  </a>
   <div class="container">
     <p class="copyright">&copy;2017</p>
     <p class="we-love">we <span class="love">❤︎</span> components</p>
   </div>
 </footer>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -162,6 +162,8 @@
   border-radius: 50%;
   width: 45px;
   height: 45px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .btn-scroll-down .icon-scroll-down {
@@ -176,6 +178,11 @@
   height: 45px;
   border-radius: 22.5px;
   cursor: pointer;
+}
+
+.button a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .button.go {
