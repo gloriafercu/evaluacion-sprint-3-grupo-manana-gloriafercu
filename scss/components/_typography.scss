@@ -28,6 +28,16 @@
   }
 }
 
+// MENU
+
+.item a {
+  font-family: $font-robotoSlab;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 45px;
+  color: $color-extra-dark-midtone;
+}
+
 // LOOKING THROUGH A WINDOW
 
 .insomnia {

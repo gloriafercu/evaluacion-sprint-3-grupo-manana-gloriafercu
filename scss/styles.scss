@@ -2,12 +2,11 @@
 // core
 
 @import 'core/variables';
-@import 'core/functions';
 @import 'core/mixins';
-
 
 // components
 
+@import 'components/menu';
 @import 'components/hero';
 @import 'components/typography';
 @import 'components/buttons';

@@ -1,0 +1,65 @@
+@keyframes left-to-right {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.content-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.53);
+  animation: left-to-right ease 1s backwards;
+  .list-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 276px;
+    height: 100%;
+    padding-top: 45px;
+    background-color: $color-light;
+  }
+}
+.item {
+  box-shadow: 5px 0 $color-midtone inset;
+  padding-left: 30px;
+  margin-bottom: 8px;
+  list-style-type: none;
+  transition: box-shadow ease 1s;
+  &:hover {
+    box-shadow: 276px 0 $color-midtone inset;
+  }
+  a {
+    text-decoration: none;
+    position: relative;
+    display: block;
+    width: 100%;
+    color: $color-extra-dark-midtone;
+    transition: color ease 0.1s;
+    &:hover {
+    color: $color-light;
+    }
+  }
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  left: 276px;
+  cursor: pointer;
+  .icon-close {
+    @include absoluteCentered();
+  }
+}
+
+.hidden {
+  display: none;
+}

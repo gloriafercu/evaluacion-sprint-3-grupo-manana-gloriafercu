@@ -1,3 +1,75 @@
+.content-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.53);
+  -webkit-animation: left-to-right ease 1s backwards;
+  animation: left-to-right ease 1s backwards;
+}
+
+.content-menu .list-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 276px;
+  height: 100%;
+  padding-top: 45px;
+  background-color: #ffffff;
+}
+
+.item {
+  -webkit-box-shadow: 5px 0 #f26002 inset;
+  box-shadow: 5px 0 #f26002 inset;
+  padding-left: 30px;
+  margin-bottom: 8px;
+  list-style-type: none;
+  -webkit-transition: -webkit-box-shadow ease 1s;
+  transition: -webkit-box-shadow ease 1s;
+  transition: box-shadow ease 1s;
+  transition: box-shadow ease 1s, -webkit-box-shadow ease 1s;
+}
+
+.item:hover {
+  -webkit-box-shadow: 276px 0 #f26002 inset;
+  box-shadow: 276px 0 #f26002 inset;
+}
+
+.item a {
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 100%;
+  color: #304268;
+  -webkit-transition: color ease 0.1s;
+  transition: color ease 0.1s;
+}
+
+.item a:hover {
+  color: #ffffff;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  left: 276px;
+  cursor: pointer;
+}
+
+.btn-close .icon-close {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,7 +109,7 @@
 }
 
 .btn-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   cursor: pointer;
@@ -77,6 +149,14 @@
   font-size: 16px;
   font-weight: 400;
   color: #ffffff;
+}
+
+.item a {
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 45px;
+  color: #304268;
 }
 
 .insomnia {
@@ -143,6 +223,7 @@
 
 .btn-menu {
   background-color: #0271bc;
+  outline: none;
   border: 0;
   width: 44px;
   height: 44px;
@@ -154,6 +235,22 @@
   background-repeat: no-repeat;
   width: 16px;
   height: 14px;
+}
+
+.btn-close {
+  background-color: #f26002;
+  outline: none;
+  border: 0;
+  width: 44px;
+  height: 44px;
+}
+
+.btn-close .icon-close {
+  background-image: url("../images/ico-close.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
 }
 
 .btn-scroll-down {
@@ -177,18 +274,16 @@
 .button {
   height: 45px;
   border-radius: 22.5px;
+  outline: none;
   cursor: pointer;
-}
-
-.button a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .button.go {
   background-color: #ffffff;
   border: 2px solid #f26002;
   width: 76px;
+  -webkit-transition: background-color ease-in 0.5s, color ease-in 0.5s, border ease-in 0.5s;
+  transition: background-color ease-in 0.5s, color ease-in 0.5s, border ease-in 0.5s;
 }
 
 .button.go:hover {
@@ -200,6 +295,8 @@
 .button.more {
   background-color: #f26002;
   width: 184px;
+  -webkit-transition: background-color ease-in 0.5s, color ease-in 0.5s, border ease-in 0.5s;
+  transition: background-color ease-in 0.5s, color ease-in 0.5s, border ease-in 0.5s;
 }
 
 .button.more:hover {
@@ -527,6 +624,34 @@
 
   .cols-reasons .reasons {
     grid-column: span 4;
+  }
+}
+
+@-webkit-keyframes left-to-right {
+  from {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes left-to-right {
+  from {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1;
   }
 }
 
