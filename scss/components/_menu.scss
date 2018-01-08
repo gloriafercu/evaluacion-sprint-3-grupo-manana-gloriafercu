@@ -1,10 +1,20 @@
 @keyframes left-to-right {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-276px);
+    opacity: 0;
+
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
     opacity: 0;
   }
   to {
-    transform: translateX(0%);
     opacity: 1;
   }
 }
@@ -17,11 +27,12 @@
   height: 100%;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.53);
-  animation: left-to-right ease 1s backwards;
+  animation: fade-in ease .5s;
   .list-content {
-    position: fixed;
+    animation: left-to-right ease 1s ;
+    position: relative;
     top: 0;
-    left: 0;
+    left: 0px;
     width: 276px;
     height: 100%;
     padding-top: 45px;
@@ -29,23 +40,25 @@
   }
 }
 .item {
-  box-shadow: 5px 0 $color-midtone inset;
-  padding-left: 30px;
   margin-bottom: 8px;
   list-style-type: none;
-  transition: box-shadow ease 1s;
-  &:hover {
-    box-shadow: 276px 0 $color-midtone inset;
-  }
+  transition: box-shadow 1s  ease-in-out;
+  -webkit-transition: box-shadow 1s  ease-in-out;
+  overflow: hidden;
   a {
+    box-shadow: inset 0px 0px 0px $color-midtone;
+    transition: box-shadow 0.4s;
+    box-sizing: border-box;
     text-decoration: none;
     position: relative;
     display: block;
-    width: 100%;
     color: $color-extra-dark-midtone;
-    transition: color ease 0.1s;
+    width: 100%;
+    padding-left: 30px;
+    transition: all 1s ease;
     &:hover {
-    color: $color-light;
+      color: $color-light;
+      box-shadow: inset -276px 0px 0px $color-midtone ;
     }
   }
 }

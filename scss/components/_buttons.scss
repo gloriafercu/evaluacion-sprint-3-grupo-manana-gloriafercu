@@ -50,6 +50,7 @@
     height: 11.7px;
   }
 }
+
 // BOTÓN GO AND MORE
 
 .button {
@@ -62,32 +63,44 @@
     border: 2px solid $color-midtone;
     width: 76px;
     transition: background-color ease-in 0.5s, color ease-in 0.5s, border ease-in 0.5s;
-    &:hover {
-      background-color: $color-midtone;
-      border: 2px solid $color-light;
-      color: $color-light;
-      }
     @media (min-width: 768px) and (max-width: 1279px) {
       width: 91px;
+      &:hover {
+        background-color: $color-midtone;
+        border: 2px solid $color-light;
+        color: $color-light;
+      }
     }
     @media (min-width: 1280px) {
       width: 160px;
+      &:hover {
+        background-color: $color-midtone;
+        border: 2px solid $color-light;
+        color: $color-light;
+      }
     }
   }
+
   &.more {
     background-color: $color-midtone;
+    border: none;
     width: 184px;
     transition: background-color ease-in 0.5s, color ease-in 0.5s, border ease-in 0.5s;
-    &:hover {
-      background-color: $color-light;
-      border: 2px solid $color-midtone;
-      color: $color-midtone;
-      }
     @media (min-width: 768px) and (max-width: 1279px) {
       width: 210px;
+      &:hover {
+        background-color: $color-light;
+        border: 2px solid $color-midtone;
+        color: $color-midtone;
+      }
     }
     @media (min-width: 1280px) {
       width: 255px;
+      &:hover {
+        background-color: $color-light;
+        border: 2px solid $color-midtone;
+        color: $color-midtone;
+      }
     }
   }
 }

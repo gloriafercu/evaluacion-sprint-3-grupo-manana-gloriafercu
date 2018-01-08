@@ -6,14 +6,16 @@
   height: 100%;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.53);
-  -webkit-animation: left-to-right ease 1s backwards;
-  animation: left-to-right ease 1s backwards;
+  -webkit-animation: fade-in ease .5s;
+  animation: fade-in ease .5s;
 }
 
 .content-menu .list-content {
-  position: fixed;
+  -webkit-animation: left-to-right ease 1s;
+  animation: left-to-right ease 1s;
+  position: relative;
   top: 0;
-  left: 0;
+  left: 0px;
   width: 276px;
   height: 100%;
   padding-top: 45px;
@@ -21,34 +23,39 @@
 }
 
 .item {
-  -webkit-box-shadow: 5px 0 #f26002 inset;
-  box-shadow: 5px 0 #f26002 inset;
-  padding-left: 30px;
   margin-bottom: 8px;
   list-style-type: none;
-  -webkit-transition: -webkit-box-shadow ease 1s;
-  transition: -webkit-box-shadow ease 1s;
-  transition: box-shadow ease 1s;
-  transition: box-shadow ease 1s, -webkit-box-shadow ease 1s;
-}
-
-.item:hover {
-  -webkit-box-shadow: 276px 0 #f26002 inset;
-  box-shadow: 276px 0 #f26002 inset;
+  -webkit-transition: -webkit-box-shadow 1s  ease-in-out;
+  transition: -webkit-box-shadow 1s  ease-in-out;
+  transition: box-shadow 1s  ease-in-out;
+  transition: box-shadow 1s  ease-in-out, -webkit-box-shadow 1s  ease-in-out;
+  -webkit-transition: box-shadow 1s  ease-in-out;
+  overflow: hidden;
 }
 
 .item a {
+  -webkit-box-shadow: inset 0px 0px 0px #f26002;
+  box-shadow: inset 0px 0px 0px #f26002;
+  -webkit-transition: -webkit-box-shadow 0.4s;
+  transition: -webkit-box-shadow 0.4s;
+  transition: box-shadow 0.4s;
+  transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   text-decoration: none;
   position: relative;
   display: block;
-  width: 100%;
   color: #304268;
-  -webkit-transition: color ease 0.1s;
-  transition: color ease 0.1s;
+  width: 100%;
+  padding-left: 30px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .item a:hover {
   color: #ffffff;
+  -webkit-box-shadow: inset -276px 0px 0px #f26002;
+  box-shadow: inset -276px 0px 0px #f26002;
 }
 
 .btn-close {
@@ -109,7 +116,7 @@
 }
 
 .btn-menu {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   cursor: pointer;
@@ -286,23 +293,12 @@
   transition: background-color ease-in 0.5s, color ease-in 0.5s, border ease-in 0.5s;
 }
 
-.button.go:hover {
-  background-color: #f26002;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-}
-
 .button.more {
   background-color: #f26002;
+  border: none;
   width: 184px;
   -webkit-transition: background-color ease-in 0.5s, color ease-in 0.5s, border ease-in 0.5s;
   transition: background-color ease-in 0.5s, color ease-in 0.5s, border ease-in 0.5s;
-}
-
-.button.more:hover {
-  background-color: #ffffff;
-  border: 2px solid #f26002;
-  color: #f26002;
 }
 
 .btn-arrow {
@@ -483,8 +479,20 @@
     width: 91px;
   }
 
+  .button.go:hover {
+    background-color: #f26002;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+  }
+
   .button.more {
     width: 210px;
+  }
+
+  .button.more:hover {
+    background-color: #ffffff;
+    border: 2px solid #f26002;
+    color: #f26002;
   }
 
   .container {
@@ -577,8 +585,20 @@
     width: 160px;
   }
 
+  .button.go:hover {
+    background-color: #f26002;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+  }
+
   .button.more {
     width: 255px;
+  }
+
+  .button.more:hover {
+    background-color: #ffffff;
+    border: 2px solid #f26002;
+    color: #f26002;
   }
 
   .container {
@@ -629,28 +649,48 @@
 
 @-webkit-keyframes left-to-right {
   from {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-276px);
+    transform: translateX(-276px);
     opacity: 0;
   }
 
   to {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
     opacity: 1;
   }
 }
 
 @keyframes left-to-right {
   from {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-276px);
+    transform: translateX(-276px);
     opacity: 0;
   }
 
   to {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
     opacity: 1;
   }
 }
