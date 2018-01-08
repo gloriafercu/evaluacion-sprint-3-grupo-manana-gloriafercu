@@ -45,3 +45,18 @@ var arrayLiMenu = document.querySelectorAll('.item a');
 for (var i = 0; i < arrayLiMenu.length; i++) {
   arrayLiMenu[i].addEventListener('click', closeMenu);
 }
+
+
+// PETICIÓN AJAX
+
+var request = new XMLHttpRequest();
+request.open('GET', 'https://three-random-reasons-izwfjpgbqm.now.sh/');
+
+request.addEventListener('click',loadReasons);
+var buttonMore = document.querySelector('.more');
+
+
+function  loadReasons() {
+  var response = request.responseText;
+  document.body.innerHTML = response;
+}
