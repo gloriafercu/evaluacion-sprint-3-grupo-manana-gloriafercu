@@ -2,7 +2,6 @@
   from {
     transform: translateX(-276px);
     opacity: 0;
-
   }
   to {
     transform: translateX(0px);
@@ -29,7 +28,7 @@
   background-color: rgba(0, 0, 0, 0.53);
   animation: fade-in ease .5s;
   .list-content {
-    animation: left-to-right ease 1s ;
+    animation: left-to-right ease 1s;
     position: relative;
     top: 0;
     left: 0px;
