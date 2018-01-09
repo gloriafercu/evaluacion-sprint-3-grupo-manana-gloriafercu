@@ -41,29 +41,16 @@ function  loadReasons() {
   var listReasons = '';
   for (var i = 0; i < arrayReasons.length; i++) {
     listReasons += '<div class="reasons"><h3 class="title-reason">'
-                    + arrayReasons[i].title +
-                    '</h3><p class="paragraph reason">'
-                    + arrayReasons[i].description +
-                    '</p></div>';
+    + arrayReasons[i].title +
+    '</h3><p class="paragraph reason">'
+    + arrayReasons[i].description +
+    '</p></div>';
   }
   var colsReasons = document.querySelector('.cols-reasons');
   colsReasons.innerHTML += listReasons;
 }
 
 request.send();
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // FUNCIÓN SMOOTH SCROLL (JQUERY)
 
