@@ -1,3 +1,25 @@
+var liMenu = [
+  {
+    content: 'Anonymous proxy',
+    link: "#content-hero"
+  },
+  {
+    content: 'Looking Through A Window',
+    link: "#looking-window"
+  },
+  {
+    content: '3 Reasons To Purchase',
+    link: "#reasons-box"
+  }
+];
+
+var ul = document.querySelector('.ul');
+var listLi = '';
+for (var i = 0; i < liMenu.length; i++) {
+  listLi += '<li class="item"><a href="' + liMenu[i].link +'">' + liMenu[i].content+ '</a></li>';
+}
+ul.innerHTML += listLi;
+
 // MENÚ DESPLEGABLE
 
 // Abrir menú
@@ -26,31 +48,37 @@ for (var i = 0; i < arrayLiMenu.length; i++) {
 }
 
 
+
 // PETICIÓN AJAX
 
-var request = new XMLHttpRequest();
-request.open('GET', 'https://three-random-reasons-izwfjpgbqm.now.sh/');
 
+
+var request;
 var buttonMore = document.querySelector('.more');
 buttonMore.addEventListener('click', loadReasons);
 
 
-function  loadReasons() {
-  var response = request.responseText;
-  var arrayReasons = JSON.parse(response).reasons;
-  var listReasons = '';
-  for (var i = 0; i < arrayReasons.length; i++) {
-    listReasons += '<div class="reasons"><h3 class="title-reason">'
-    + arrayReasons[i].title +
-    '</h3><p class="paragraph reason">'
-    + arrayReasons[i].description +
-    '</p></div>';
-  }
-  var colsReasons = document.querySelector('.cols-reasons');
-  colsReasons.innerHTML += listReasons;
-}
+function loadReasons() {
+  request = new XMLHttpRequest();
+  request.open('GET', 'https://three-random-reasons-izwfjpgbqm.now.sh/');
+  request.addEventListener('load', printReasons);
 
-request.send();
+  function  printReasons() {
+    var response = request.responseText;
+    var arrayReasons = JSON.parse(response).reasons;
+    var listReasons = '';
+    for (var i = 0; i < arrayReasons.length; i++) {
+      listReasons += '<div class="reasons"><h3 class="title-reason">'
+      + arrayReasons[i].title +
+      '</h3><p class="paragraph reason">'
+      + arrayReasons[i].description +
+      '</p></div>';
+    }
+    var colsReasons = document.querySelector('.cols-reasons');
+    colsReasons.innerHTML += listReasons;
+  }
+  request.send();
+}
 
 // FUNCIÓN SMOOTH SCROLL (JQUERY)
 

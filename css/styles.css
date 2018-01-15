@@ -531,7 +531,9 @@
   .button.more {
     margin: 60px 0 60px;
   }
+}
 
+@media (min-width: 768px) {
   .cols-reasons {
     grid-gap: 30px;
   }
@@ -636,14 +638,6 @@
 
   .button.more {
     margin: 60px 0 60px;
-  }
-
-  .cols-reasons {
-    grid-gap: 30px;
-  }
-
-  .cols-reasons .reasons {
-    grid-column: span 4;
   }
 }
 
